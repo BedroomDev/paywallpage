@@ -37,7 +37,7 @@ const ContentCard = ({
 }: ContentCardProps) => {
   return (
     <Card
-      className="w-full max-w-[300px] overflow-hidden transition-all duration-200 hover:shadow-lg bg-white"
+      className="w-full max-w-[300px] overflow-hidden transition-all duration-200 hover:shadow-lg bg-white rounded-lg border border-gray-200"
       onClick={onClick}
     >
       <div className="relative h-40 w-full overflow-hidden bg-gray-100">
@@ -46,7 +46,7 @@ const ContentCard = ({
           alt={title}
           className="h-full w-full object-cover transition-transform duration-200 hover:scale-105"
         />
-        <Badge className="absolute right-2 top-2 bg-primary/90">
+        <Badge className="absolute right-2 top-2 bg-yellow-500 text-white">
           {`${currency} ${price.toFixed(2)}`}
         </Badge>
       </div>
@@ -83,7 +83,10 @@ const ContentCard = ({
           <span>{likes}</span>
         </Button>
         <Link to={`/content/${id}`}>
-          <Button size="sm" className="flex items-center gap-1">
+          <Button
+            size="sm"
+            className="bg-yellow-500 hover:bg-yellow-600 text-white flex items-center gap-1"
+          >
             <Download className="h-4 w-4" />
             <span>Preview</span>
           </Button>

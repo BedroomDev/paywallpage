@@ -337,7 +337,10 @@ const ContentDetail: React.FC<ContentDetailProps> = ({
 
                 <div className="space-y-3">
                   {isPurchased ? (
-                    <Button className="w-full" size="lg">
+                    <Button
+                      className="w-full bg-yellow-500 hover:bg-yellow-600 text-white"
+                      size="lg"
+                    >
                       <Download className="mr-2 h-4 w-4" />
                       Download Files
                     </Button>
@@ -347,7 +350,10 @@ const ContentDetail: React.FC<ContentDetailProps> = ({
                       onOpenChange={setShowPurchaseDialog}
                     >
                       <DialogTrigger asChild>
-                        <Button className="w-full" size="lg">
+                        <Button
+                          className="w-full bg-yellow-500 hover:bg-yellow-600 text-white"
+                          size="lg"
+                        >
                           Purchase Now
                         </Button>
                       </DialogTrigger>
@@ -378,7 +384,10 @@ const ContentDetail: React.FC<ContentDetailProps> = ({
                           >
                             Cancel
                           </Button>
-                          <Button onClick={handlePurchase}>
+                          <Button
+                            onClick={handlePurchase}
+                            className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                          >
                             Complete Purchase
                           </Button>
                         </DialogFooter>

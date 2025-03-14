@@ -24,12 +24,12 @@ const CompanyNavbar = ({
   avatarUrl = "",
 }: CompanyNavbarProps) => {
   return (
-    <nav className="w-full h-[70px] px-4 md:px-6 lg:px-8 bg-background border-b flex items-center justify-between sticky top-0 z-50">
+    <nav className="w-full h-[70px] px-4 md:px-6 lg:px-8 bg-white border-b flex items-center justify-between sticky top-0 z-50">
       {/* Logo and Brand */}
       <div className="flex items-center">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold">KP</span>
+          <div className="w-8 h-8 rounded-md bg-yellow-500 flex items-center justify-center">
+            <span className="text-white font-bold">KP</span>
           </div>
           <span className="text-xl font-bold hidden md:block">
             KnowledgePay
@@ -55,21 +55,33 @@ const CompanyNavbar = ({
       <div className="hidden md:flex items-center gap-4">
         <Link
           to="/discover"
-          className="text-sm font-medium hover:text-primary transition-colors"
+          className="text-sm font-medium hover:text-yellow-500 transition-colors"
         >
           Discover
         </Link>
         <Link
           to="/categories"
-          className="text-sm font-medium hover:text-primary transition-colors"
+          className="text-sm font-medium hover:text-yellow-500 transition-colors"
         >
           Categories
         </Link>
         <Link
           to="/companies"
-          className="text-sm font-medium hover:text-primary transition-colors"
+          className="text-sm font-medium hover:text-yellow-500 transition-colors"
         >
           Companies
+        </Link>
+        <Link
+          to="/creator-dashboard"
+          className="text-sm font-medium hover:text-yellow-500 transition-colors"
+        >
+          Creator Dashboard
+        </Link>
+        <Link
+          to="/admin"
+          className="text-sm font-medium hover:text-yellow-500 transition-colors"
+        >
+          Admin
         </Link>
 
         {isLoggedIn ? (
@@ -133,7 +145,10 @@ const CompanyNavbar = ({
             <Button variant="ghost" asChild>
               <Link to="/login">Login</Link>
             </Button>
-            <Button asChild>
+            <Button
+              className="bg-yellow-500 hover:bg-yellow-600 text-white"
+              asChild
+            >
               <Link to="/signup">Sign Up</Link>
             </Button>
           </>

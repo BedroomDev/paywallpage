@@ -20,10 +20,10 @@ const Signup: React.FC = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">CP</span>
+            <div className="w-8 h-8 rounded-md bg-yellow-500 flex items-center justify-center">
+              <span className="text-white font-bold">KP</span>
             </div>
-            <span className="text-xl font-bold">CreatorPay</span>
+            <span className="text-xl font-bold">KnowledgePay</span>
           </Link>
         </div>
 
@@ -77,7 +77,10 @@ const Signup: React.FC = () => {
             </div>
           </CardContent>
           <CardFooter className="flex flex-col space-y-4">
-            <Button className="w-full" size="lg">
+            <Button
+              className="w-full bg-yellow-500 hover:bg-yellow-600 text-white"
+              size="lg"
+            >
               Create account
             </Button>
             <div className="text-center text-sm">

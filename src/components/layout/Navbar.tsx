@@ -28,10 +28,12 @@ const Navbar = ({
       {/* Logo and Brand */}
       <div className="flex items-center">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold">CP</span>
+          <div className="w-8 h-8 rounded-md bg-yellow-500 flex items-center justify-center">
+            <span className="text-white font-bold">KP</span>
           </div>
-          <span className="text-xl font-bold hidden md:block">CreatorPay</span>
+          <span className="text-xl font-bold hidden md:block">
+            KnowledgePay
+          </span>
         </Link>
       </div>
 
@@ -79,7 +81,10 @@ const Navbar = ({
             </Button>
 
             {/* Upload Button */}
-            <Button size="sm" className="gap-1">
+            <Button
+              size="sm"
+              className="gap-1 bg-yellow-500 hover:bg-yellow-600 text-white"
+            >
               <Upload className="h-4 w-4" />
               <span>Upload</span>
             </Button>
@@ -132,7 +137,10 @@ const Navbar = ({
             <Button variant="ghost" asChild>
               <Link to="/login">Login</Link>
             </Button>
-            <Button asChild>
+            <Button
+              asChild
+              className="bg-yellow-500 hover:bg-yellow-600 text-white"
+            >
               <Link to="/signup">Sign Up</Link>
             </Button>
           </>
